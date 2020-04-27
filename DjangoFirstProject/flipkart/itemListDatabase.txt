@@ -1,0 +1,6 @@
+1,Banana,Grower's Selection Loose Banana, 78.04 p/Kg, 4
+2,Whole Milk, British Whole Milk 4 pt, £1.10, 10
+3, Cadbury Chocolate, Chocolate bar 4 pack, £1,20
+4,Rice, Uncle Ben's Long Grain Microwave Rice, £2, 180
+5,Wine, Hardys Classic Cabernet Merlot, £8.50, 365
+6, Bread, Hovis seed sensation, £0.84, 3

@@ -1,0 +1,56 @@
+
+<link href='https://fonts.googleapis.com/css?family=Diplomata SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+{% extends "base_html.html" %}
+
+{% block content %}
+
+
+    <form action="login" method="post">
+        {% csrf_token %}
+    <table>
+        <tr>
+            <td height="50"></td>
+        </tr>
+          <tr>
+              <td width="420"></td>
+            <td height="100"><font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">ECART</font>&nbsp;&nbsp;&nbsp; <font style="color:orange; font-weight: bold; font-size:30px; font-family:'Diplomata SC'">Groceries</font>
+            </td>
+        </tr>
+    </table>
+    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="400" >
+        <tr><td>
+    <table style="margin-left:auto;margin-right:auto;">
+
+        <tr>
+            <td><font size="3" color="#7D3C98" style="font-weight: bold; font-family:'ABeeZee'">New to ECart ?</font> </td>
+        </tr>
+          <tr>
+             <td height="40"></td>
+        </tr>
+        <tr>
+            <td height="40"><font size="3">Check your delivery and collection options&nbsp;&nbsp;</font> </td>
+        </tr>
+         <tr>
+             <td><input type="text" name="postcode" value="" size="10" required style="font-family:'Comic Sans MS'"/></td>
+        </tr>
+        <br><br>
+        <tr>
+            <td height="40"> <input type="submit" value="Check postcode" style="font-weight: bold; font-family:'ABeeZee'"></td>
+        </tr>
+         <tr>
+             <td height="40"></td>
+        </tr>
+        <tr>
+                <td align="center" height="60"> <a href="url">Sign up?</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="url">Start shopping?</a></td>
+        </tr>
+        <tr>
+            </td>
+        </tr>
+
+    </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+{% endblock content %}

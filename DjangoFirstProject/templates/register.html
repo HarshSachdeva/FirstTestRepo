@@ -1,0 +1,43 @@
+
+<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+
+{% extends "base_html.html" %}
+
+{% block content %}
+    <form action="register" method="post">
+        {% csrf_token %}
+    <table>
+        <tr>
+            <td height="150">
+            </td>
+        </tr>
+    </table>
+    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="700";>
+        <tr><td height="250">
+            {% for message in messages%}
+            {{message}}<br>
+            {% endfor%}
+    <table style="margin-left:auto;margin-right:auto;">
+
+        <tr>
+            <td height="40"><font size="3" style="font-weight: bold;">Mobile Number:&nbsp;&nbsp;&nbsp;</font> </td><td><input type="text" name="mobile" required>&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="40"><font size="3" style="font-weight: bold;">Email Id:&nbsp;&nbsp;&nbsp;</font> </td><td><textarea rows="1" cols="40" name="email" required></textarea>&nbsp;&nbsp;</td>
+        </tr>
+         <tr>
+             <td height="50"><font size="3" style="font-weight: bold;">Delivery Address:&nbsp;&nbsp;&nbsp;</font></td><td> <textarea rows="3" cols="40" name="address" required></textarea>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="40"><font size="3" style="font-weight: bold;">Password:</font> &nbsp;&nbsp;&nbsp; </td><td><input type="password" name="pwd" required> &nbsp;</td>
+        </tr>
+        <br><br>
+        <tr>
+            <td colspan="2" align="center" height="60"> <input type="submit" style="font-weight: bold; font-family:'ABeeZee'" ></td>
+        </tr>
+    </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+{% endblock content %}
