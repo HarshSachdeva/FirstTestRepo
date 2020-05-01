@@ -1,5 +1,152 @@
 {% extends "base_html.html" %}
 
 {% block content %}
-Catalog review Page
+
+<script>
+function HideSlotDiv(){
+ var x = document.getElementById("slotDiv");
+ var y = document.getElementById("addressDiv");
+ x.style.display = "none";
+ y.style.display = "none";
+}
+function ShowSlotDiv(){
+var x = document.getElementById("slotDiv");
+ x.style.display = "block";
+}
+function ShowAddress(){
+ var x = document.getElementById("addressDiv");
+ x.style.display = "block";
+}
+function finalSubmit(){
+ document.forms['verifyForm'].submit();
+}
+
+</script>
+<body onload="HideSlotDiv()">
+<form action="thankyou" name="verifyForm">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td height="20">
+            </td>
+        </tr>
+    </table>
+
+    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;text-align:center" border="1" width="1000"
+           align="center">
+        <tr>
+            <th height="40" bgcolor="#D7BDE2">Product Name</th>
+            <th height="40" bgcolor="#D7BDE2">Product Description</th>
+            <th height="40" bgcolor="#D7BDE2">Price</th>
+            <th height="40" bgcolor="#D7BDE2">Expiry Date</th>
+            <th height="40" bgcolor="#D7BDE2">Quantity</th>
+        </tr>
+        {% for item in listOfSelectedRow %}
+        <tr>
+            <td>{{item.itemName}}</td>
+            <td>{{item.itemDesc}}</td>
+            <td>£{{item.itemPrice}}</td>
+            <td>{{item.expiryDte}}</td>
+            <td>{{item.quantity}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th height="30" align="right" colspan="5"><font style="background-color:yellow;"> &nbsp;Total &nbsp;&nbsp;{{total}}&nbsp;</font>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </th>
+        </tr>
+    </table>
+    <table style="margin-left:auto;margin-right:auto;text-align:center" width="1000" align="center">
+        <tr>
+            <td colspan="7" height="60"><input type="button" value="proceed to select slot"
+                                               style="font-weight: bold; font-family:'ABeeZee'" onclick="ShowSlotDiv()">
+            </td>
+        </tr>
+        <tr>
+            <td height="60">
+            </td>
+        </tr>
+    </table>
+    <div id="slotDiv">
+        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="700" ; border="1">
+            <tr>
+                <td>
+                    <!--       {% for message in messages%}
+                           {{message}}<br>
+                           {% endfor%}-->
+                    <table style="margin-left:auto;margin-right:auto;">
+
+                        <tr>
+                            <td height="80"><font size="3" style="font-weight: bold;">Select
+                                Date:&nbsp;&nbsp;&nbsp;</font></td>
+                            <td><select required name="deliveryDate" style="width: 100px; text-align-last:center;">
+                                <option value="05-May">05-May</option>
+                                <option value="06-May">06-May</option>
+                                <option value="07-May">07-May</option>
+                                <option value="08-May">08-May</option>
+                                <option value="09-May">09-May</option>
+                                <option value="10-May">10-May</option>
+                                <option value="11-May">11-May</option>
+                            </select> &nbsp;
+                            </td>
+                            <td width="150"></td>
+                            <td height="40"><font size="3" style="font-weight: bold;">Select
+                                Timeslot:&nbsp;&nbsp;&nbsp;</font></td>
+                            <td><select required name="deliveryTime" style="width: 100px; text-align-last:center;">
+                                <option value="05-May">09:00</option>
+                                <option value="06-May">11:00y</option>
+                                <option value="07-May">13:00</option>
+                                <option value="08-May">15:00</option>
+                                <option value="09-May">17:00</option>
+                                <option value="10-May">19:00</option>
+                            </select> &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="40" align="center" colspan="5"><input type="button" value="proceed  "
+                                                                              style="font-weight: bold; font-family:'ABeeZee'"
+                                                                              onclick="ShowAddress()"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+
+             <tr>
+            <td height="60">
+            </td>
+        </tr>
+        </table>
+
+
+    </div>
+
+
+    <div id="addressDiv">
+        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="700" ; border="1">
+            <tr>
+                <td>
+                    <table style="margin-left:auto;margin-right:auto;">
+
+                        <tr><td width="200px" height="90"><font size="3" style="font-weight: bold;">Confirm / Edit Address:</font> </td>
+                            <td height="40"> <textarea rows="3" cols="40" name="address" required>{{address}}</textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td height="40" colspan="2" align="center" ><input type="button" value="Book Delivery"
+                                                               style="font-weight: bold; font-family:'ABeeZee'"
+                                                               onclick="finalSubmit()"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</form>
+</body>
+
 {% endblock content %}

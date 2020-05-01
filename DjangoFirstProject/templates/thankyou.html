@@ -1,5 +1,21 @@
 {% extends "base_html.html" %}
 
 {% block content %}
-Catalog Page
+ {% csrf_token %}
+
+
+</script>
+<form name="ecart" method="post">
+    <table>
+        <tr>
+            <td height="50"></td>
+        </tr>
+        <tr>
+            <td width="420"></td>
+            <td height="100"><font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">Thank You for placing order</font>&nbsp;&nbsp;&nbsp;
+            </td>
+
+        </tr>
+    </table>
+    </form>
 {% endblock content %}

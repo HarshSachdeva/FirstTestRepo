@@ -3,11 +3,29 @@
 {% load static %}
 {% static "images" as baseUrl %}
 
- <form action="catalog" method="post">
+<script>function submitPage(form)
+{
+var isChecked = false;
+var checkboxes = document.getElementsByName('selectedRows');
+for (var i=0; i<checkboxes.length; i++) {
+     if (checkboxes[i].checked) {
+        isChecked = true;
+     }
+  }
+ if (isChecked){
+        document.forms['catalogForm'].submit();
+    }
+    else{
+            window.alert("you have not selected any product. please select to proceed");
+    }
+}
+</script>
+
+ <form action="review" method="post" id="catalogForm" name="catalogForm">
         {% csrf_token %}
     <table>
         <tr>
-            <td height="20">
+            <td height="20"><input type="hidden" value="{{address}}" name="address"/>
             </td>
         </tr>
     </table>
@@ -24,13 +42,13 @@
         </tr>
         {% for item in itemlist %}
         <tr>
-            <td width="40"><input type="checkbox" value="{{item.itemId}}" name="selectedRows"></td>
+            <td width="40"><input type="checkbox" value="{{item.itemId}}" name="selectedRows" id="selectedRows"></td>
             <td><img src="{{baseUrl}}/{{item.itemId}}.jpg" alt="" width="70" height="70"></td>
             <td>{{item.itemName}}</td>
             <td>{{item.itemDesc}}</td>
-            <td>{{item.itemPrice}}</td>
+            <td>£{{item.itemPrice}}</td>
             <td>{{item.expiryDte}}</td>
-            <td><select required>
+            <td><select required name="quantity{{item.itemId}}">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -42,7 +60,7 @@
     </table>
       <table  style="margin-left:auto;margin-right:auto;text-align:center" width = "1000" align="center">
         <tr>
-            <td height="60"><td colspan="7"><input type="submit" value="purchase" style="font-weight: bold; font-family:'ABeeZee'"></td>
+            <td height="80"><td colspan="7"><input type="button" onclick="submitPage(document.catalogForm)" value="purchase" style="height:40px; width:100px; font-weight: bold; font-family:'ABeeZee'; background-color:#D7BDE2;"></td>
         </tr>
     </table>
     </form>
