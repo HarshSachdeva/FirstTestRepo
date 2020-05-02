@@ -32,7 +32,7 @@ function finalSubmit(){
         </tr>
     </table>
 
-    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;text-align:center" border="1" width="1000"
+    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;text-align:center" border="1"
            align="center">
         <tr>
             <th height="40" bgcolor="#D7BDE2">Product Name</th>
@@ -56,19 +56,19 @@ function finalSubmit(){
             </th>
         </tr>
     </table>
-    <table style="margin-left:auto;margin-right:auto;text-align:center" width="1000" align="center">
+    <table style="margin-left:auto;margin-right:auto;text-align:center" align="center">
         <tr>
             <td colspan="7" height="60"><input type="button" value="proceed to select slot"
                                                style="font-weight: bold; font-family:'ABeeZee'" onclick="ShowSlotDiv()">
             </td>
         </tr>
         <tr>
-            <td height="60">
+            <td height="30">
             </td>
         </tr>
     </table>
     <div id="slotDiv">
-        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="700" ; border="1">
+        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" border="1">
             <tr>
                 <td>
                     <!--       {% for message in messages%}
@@ -77,9 +77,9 @@ function finalSubmit(){
                     <table style="margin-left:auto;margin-right:auto;">
 
                         <tr>
-                            <td height="80"><font size="3" style="font-weight: bold;">Select
+                            <td height="80"  style="padding-left: 15px; "><font size="3" style="font-weight: bold;">Select
                                 Date:&nbsp;&nbsp;&nbsp;</font></td>
-                            <td><select required name="deliveryDate" style="width: 100px; text-align-last:center;">
+                            <td style="padding-right: 15px;"><select required name="deliveryDate" style="text-align-last:center;">
                                 <option value="05-May">05-May</option>
                                 <option value="06-May">06-May</option>
                                 <option value="07-May">07-May</option>
@@ -89,10 +89,10 @@ function finalSubmit(){
                                 <option value="11-May">11-May</option>
                             </select> &nbsp;
                             </td>
-                            <td width="150"></td>
-                            <td height="40"><font size="3" style="font-weight: bold;">Select
+                            <td></td>
+                            <td height="40"><font size="3" style="font-weight: bold;padding-left: 15px;">Select
                                 Timeslot:&nbsp;&nbsp;&nbsp;</font></td>
-                            <td><select required name="deliveryTime" style="width: 100px; text-align-last:center;">
+                            <td><select required name="deliveryTime" style="text-align-last:center;">
                                 <option value="05-May">09:00</option>
                                 <option value="06-May">11:00y</option>
                                 <option value="07-May">13:00</option>
@@ -124,12 +124,12 @@ function finalSubmit(){
 
 
     <div id="addressDiv">
-        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="700" ; border="1">
+        <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" border="1">
             <tr>
                 <td>
                     <table style="margin-left:auto;margin-right:auto;">
 
-                        <tr><td width="200px" height="90"><font size="3" style="font-weight: bold;">Confirm / Edit Address:</font> </td>
+                        <tr><td width="200px" height="90"><font size="3" style="font-weight: bold;padding-left: 15px;">Confirm / Edit Address:</font> </td>
                             <td height="40"> <textarea rows="3" cols="40" name="address" required>{{address}}</textarea>
                             </td>
                         </tr>

@@ -30,14 +30,14 @@ for (var i=0; i<checkboxes.length; i++) {
         </tr>
     </table>
 
-    <table  bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;text-align:center" border = "1" width = "1000" align="center">
+    <table  bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;text-align:center" border = "1" align="center">
      <tr>
           <th height="40" bgcolor="#D7BDE2"></th>
           <th height="40" bgcolor="#D7BDE2"></th>
           <th height="40" bgcolor="#D7BDE2">Product Name</th>
           <th height="40" bgcolor="#D7BDE2">Product Description</th>
           <th height="40" bgcolor="#D7BDE2">Price</th>
-          <th height="40" bgcolor="#D7BDE2">Expiry Date</th>
+          <th height="40" bgcolor="#D7BDE2">Exp. Date</th>
           <th height="40" bgcolor="#D7BDE2">Quantity</th>
         </tr>
         {% for item in itemlist %}
@@ -57,10 +57,20 @@ for (var i=0; i<checkboxes.length; i++) {
             </select>  </td>
         </tr>
         {% endfor %}
+     <tr>
+         <td height="30" colspan="7">
+              <table style="width:100%">
+                <tr>
+                    <td  style="padding-left: 15px;">showing 6 0f 1250</td><td></td><td></td><td></td><td></td><td></td>
+                    <td align="right"  style="padding-right: 15px;" > <a href="">Next>></a></td>
+                 </tr>
+              </table>
+        </td>
+     </tr>
     </table>
-      <table  style="margin-left:auto;margin-right:auto;text-align:center" width = "1000" align="center">
+      <table  style="margin-left:auto;margin-right:auto;text-align:center" align="center">
         <tr>
-            <td height="80"><td colspan="7"><input type="button" onclick="submitPage(document.catalogForm)" value="purchase" style="height:40px; width:100px; font-weight: bold; font-family:'ABeeZee'; background-color:#D7BDE2;"></td>
+            <td height="80" colspan="7"><input type="button" onclick="submitPage(document.catalogForm)" value="purchase" style="height:40px; font-weight: bold; font-family:'ABeeZee'; background-color:#D7BDE2;"></td>
         </tr>
     </table>
     </form>

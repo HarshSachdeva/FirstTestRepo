@@ -19,40 +19,38 @@ document.forms['postcodeForm'].submit();
 
 <form action="register" method="post" name="postcodeForm" id="postcodeForm">
     {% csrf_token %}
-    <table>
+    <table align="center">
         <tr>
             <td height="50"></td>
         </tr>
         <tr>
-            <td width="420"></td>
-            <td height="100"><font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">ECART</font>&nbsp;&nbsp;&nbsp;
-                <font style="color:orange; font-weight: bold; font-size:30px; font-family:'Diplomata SC'">Groceries</font>
-            </td>
+            <td> <font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">ECART</font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> <font style="color:orange; font-weight: bold; font-size:30px; font-family:'Diplomata SC'">Groceries</font></td>
+        </tr>
+        <tr>
+            <td height="30"></td>
         </tr>
     </table>
-    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" width="400">
+    <table bgcolor="#EBF5FB" style="margin-left:auto;margin-right:auto;" align="center" >
         <tr>
             <td>
-                <table style="margin-left:auto;margin-right:auto;">
+                <table style="margin-left:auto;margin-right:auto;" align="center">
 
                     <tr>
-                        <td><font size="3" color="#7D3C98" style="font-weight: bold; font-family:'ABeeZee'">New to ECart
-                            ?</font></td>
+                        <td style="padding-left: 15px;"><font size="3" color="#7D3C98" style="font-weight: bold; font-family:'ABeeZee'">New to ECart ?</font></td>
                     </tr>
                     <tr>
                         <td height="40"></td>
                     </tr>
                     <tr>
-                        <td height="40"><font size="3" style="font-weight: bold;">Check your delivery and collection options&nbsp;&nbsp;</font>
-                        </td>
+                        <td height="40" style="padding-left: 15px;"><font size="3" style="font-weight: bold;">Check your delivery and collection options&nbsp;&nbsp;</font></td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="postcode" name="postcode" size="10" required
-                                   style="font-family:'Comic Sans MS'"/></td>
+                        <td style="padding-left: 15px;"><input type="text" id="postcode" name="postcode" size="10" required style="font-family:'Comic Sans MS'"/></td>
                     </tr>
                     <br><br>
                     <tr>
-                        <td height="40"><input type="button" value="Check postcode"
+                        <td height="40" style="padding-left: 15px;"><input type="button" value="Check postcode"
                                                style="font-weight: bold; font-family:'ABeeZee'"
                                                onclick="checkPostcode()"></td>
                     </tr>

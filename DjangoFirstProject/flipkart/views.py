@@ -44,7 +44,7 @@ def catalog(request):
 
     item4.itemId = 4
     item4.itemName = "Rice"
-    item4.itemDesc = "Uncle Ben's Long Grain Microwave Rice"
+    item4.itemDesc = "Uncle Ben's Long Microwave Rice"
     item4.itemPrice = "2"
     item4.expiryDte = "20-Dec"
 
@@ -105,7 +105,7 @@ def review(request):
 
     item4.itemId = 4
     item4.itemName = "Rice"
-    item4.itemDesc = "Uncle Ben's Long Grain Microwave Rice"
+    item4.itemDesc = "Uncle Ben's Long Microwave Rice"
     item4.itemPrice = "2"
     item4.expiryDte = "20-Dec"
 
