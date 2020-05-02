@@ -13,6 +13,9 @@ alert('We are good to go! We offer both home delivery and Click & Collect for po
 document.forms['postcodeForm'].submit();
 }
 }
+function cleanText(){
+document.getElementsByName('postcode')[0].value = "";
+}
 
 
 </script>
@@ -24,8 +27,7 @@ document.forms['postcodeForm'].submit();
             <td height="50"></td>
         </tr>
         <tr>
-            <td> <font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">ECART</font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td> <font style="color:orange; font-weight: bold; font-size:30px; font-family:'Diplomata SC'">Groceries</font></td>
+            <td > <font style="color:green; font-weight: bold; font-size:50px; font-family:'Diplomata SC'">ECART</font>&nbsp;&nbsp;&nbsp;&nbsp;<font style="color:orange; font-weight: bold; font-size:30px; font-family:'Diplomata SC'">Groceries</font></td>
         </tr>
         <tr>
             <td height="30"></td>
@@ -46,7 +48,7 @@ document.forms['postcodeForm'].submit();
                         <td height="40" style="padding-left: 15px;"><font size="3" style="font-weight: bold;">Check your delivery and collection options&nbsp;&nbsp;</font></td>
                     </tr>
                     <tr>
-                        <td style="padding-left: 15px;"><input type="text" id="postcode" name="postcode" size="10" required style="font-family:'Comic Sans MS'"/></td>
+                        <td style="padding-left: 15px;"><input type="text" id="postcode" name="postcode" size="15" required value="enter post code" onclick="cleanText()"/></td>
                     </tr>
                     <br><br>
                     <tr>
